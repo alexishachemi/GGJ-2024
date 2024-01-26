@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cqmcx0hg4y21v"]
+[gd_scene load_steps=18 format=3 uid="uid://cqmcx0hg4y21v"]
 
 [ext_resource type="Texture2D" uid="uid://chlnt56mtnfqo" path="res://Assets/parallax_background_layer_6.png" id="1_er8t8"]
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_p5a22"]
@@ -350,6 +350,12 @@ size = Vector2(142, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pepny"]
 size = Vector2(287, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xohx7"]
+size = Vector2(778, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fgmq"]
+size = Vector2(40, 3.5)
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_p5a22")
 playerScene = ExtResource("2_yb0ig")
@@ -418,11 +424,35 @@ shape = SubResource("RectangleShape2D_sqf0f")
 position = Vector2(1048, 456)
 shape = SubResource("RectangleShape2D_sqf0f")
 
+[node name="StaticBody2D11" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11"]
+position = Vector2(1036, 189)
+shape = SubResource("RectangleShape2D_sqf0f")
+
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
 position = Vector2(574.5, 296)
 shape = SubResource("RectangleShape2D_pepny")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
+position = Vector2(415, 186)
+shape = SubResource("RectangleShape2D_xohx7")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9"]
+position = Vector2(828, 335)
+shape = SubResource("RectangleShape2D_8fgmq")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10"]
+position = Vector2(878, 262)
+shape = SubResource("RectangleShape2D_8fgmq")
 
 [node name="PlayerSpawnPoints" type="Node2D" parent="."]
 
