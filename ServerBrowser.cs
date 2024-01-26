@@ -91,7 +91,7 @@ public partial class ServerBrowser : Control
 			serverInfo.GetNode<Label>("Name").Text = serverInfo.Name;
 			serverInfo.GetNode<Label>("IP").Text = serverIP;
 			serverInfo.GetNode<Label>("PlayerCount").Text = info.PlayerCount.ToString();
-            GetNode<VBoxContainer>("Panel/VBoxContainer").AddChild(serverInfo);
+			GetNode<VBoxContainer>("Panel/VBoxContainer").AddChild(serverInfo);
 
 			serverInfo.JoinGame += _on_join_game;
 
