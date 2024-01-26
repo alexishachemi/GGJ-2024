@@ -117,7 +117,7 @@ public partial class MultiplayerController : Control
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
 	private void startGame(){
 		GetNode<ServerBrowser>("ServerBrowser").CleanUp();
-		var scene = ResourceLoader.Load<PackedScene>("res://TestScene.tscn").Instantiate<Node2D>();
+		var scene = ResourceLoader.Load<PackedScene>("res://Scenes/TestScene.tscn").Instantiate<Node2D>();
 		GetTree().Root.AddChild(scene);
 		this.Hide();
 	}

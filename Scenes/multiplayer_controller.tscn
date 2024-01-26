@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://n2r7hedm4r0q"]
 
-[ext_resource type="Script" path="res://MultiplayerController.cs" id="1_6vlg6"]
-[ext_resource type="Script" path="res://ServerBrowser.cs" id="2_ld2pp"]
-[ext_resource type="PackedScene" uid="uid://cyi4pqrmi64tt" path="res://ServerInfo.tscn" id="3_le2yx"]
+[ext_resource type="Script" path="res://Scripts/MultiplayerController.cs" id="1_anebw"]
+[ext_resource type="Script" path="res://Scripts/ServerBrowser.cs" id="2_w2v8p"]
+[ext_resource type="PackedScene" uid="uid://cyi4pqrmi64tt" path="res://Scenes/ServerInfo.tscn" id="3_aeiuk"]
 
 [node name="Multiplayer Controller" type="Control"]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6vlg6")
+script = ExtResource("1_anebw")
 
 [node name="Host" type="Button" parent="."]
 layout_mode = 0
@@ -58,8 +58,8 @@ anchors_preset = 0
 offset_left = 1.0
 offset_right = 41.0
 offset_bottom = 40.0
-script = ExtResource("2_ld2pp")
-ServerInfo = ExtResource("3_le2yx")
+script = ExtResource("2_w2v8p")
+ServerInfo = ExtResource("3_aeiuk")
 
 [node name="BroadcastTimer" type="Timer" parent="ServerBrowser"]
 

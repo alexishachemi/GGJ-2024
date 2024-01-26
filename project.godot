@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Multiplayer Lan Tutorial CSharp"
-run/main_scene="res://multiplayer_controller.tscn"
+run/main_scene="res://Scenes/multiplayer_controller.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
 
 [dotnet]
 

@@ -1,30 +1,30 @@
 [gd_scene load_steps=12 format=3 uid="uid://hpbx14ma8p0v"]
 
-[ext_resource type="Script" path="res://Player.cs" id="1_nsa6s"]
-[ext_resource type="Texture2D" uid="uid://dld54qw3mao0w" path="res://Main Character - Male - Full spritesheet - No Guide.png" id="2_wdkh4"]
+[ext_resource type="Script" path="res://Scripts/Player.cs" id="1_4dwph"]
+[ext_resource type="Texture2D" uid="uid://dld54qw3mao0w" path="res://Assets/Main Character - Male - Full spritesheet - No Guide.png" id="2_s0wsj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0rxp2"]
-atlas = ExtResource("2_wdkh4")
+atlas = ExtResource("2_s0wsj")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qlmlk"]
-atlas = ExtResource("2_wdkh4")
+atlas = ExtResource("2_s0wsj")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7nq4q"]
-atlas = ExtResource("2_wdkh4")
+atlas = ExtResource("2_s0wsj")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_133cr"]
-atlas = ExtResource("2_wdkh4")
+atlas = ExtResource("2_s0wsj")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m61vo"]
-atlas = ExtResource("2_wdkh4")
+atlas = ExtResource("2_s0wsj")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a7x74"]
-atlas = ExtResource("2_wdkh4")
+atlas = ExtResource("2_s0wsj")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h7wyx"]
@@ -65,7 +65,7 @@ properties/1/spawn = true
 properties/1/replication_mode = 1
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
-script = ExtResource("1_nsa6s")
+script = ExtResource("1_4dwph")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
