@@ -1,0 +1,33 @@
+{
+	"subjects": [
+		"you",
+		"your face",
+		"your look",
+		"your mom",
+		"your father",
+		"your car",
+		"a flying potato",
+		"an orangoutan",
+		"a big appartment",
+		"Michael Jackson",
+		"Your Uncle Jack"
+	],
+
+	"verbs": [
+		"is",
+		"has",
+		"has been",
+		"cannot",
+		"should",
+		"touch",
+		"does not",
+		"smells like",
+		"looks like",
+		"reminds me of",
+	],
+
+	"complements": [
+		"beautiful",
+		"rotten",
+	]
+}

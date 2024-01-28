@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
+var jumps
 var attack_state : bool = false
 var attack_count : int = 1
 var attack_timer : int = 0
@@ -134,7 +135,6 @@ func die():
 func sync_animation(anim_name: StringName):
 	anim_tree.travel(anim_name)
 
-
 @rpc("any_peer","call_remote","reliable")
 func sync_flip(dir : int):
 	$Area2D.transform.x.x = dir
@@ -145,5 +145,5 @@ func hit_received():
 	health.value -= 5
 
 func _on_area_2d_body_entered(body):
-	if body != self:
+	if body != self and body.is_in_group("player"):
 		body.hit_received.rpc()

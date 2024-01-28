@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://bbkqm75x5qo4d"]
+[gd_scene load_steps=50 format=3 uid="uid://bbkqm75x5qo4d"]
 
 [ext_resource type="Script" path="res://Scenes/player_character/player_character.gd" id="1_ct0e8"]
 [ext_resource type="Texture2D" uid="uid://cyygjhnfh3d4" path="res://Pirate/spritesheet.png" id="1_dhspe"]
@@ -489,10 +489,10 @@ _data = {
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_voqrl"]
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
-properties/0/sync = true
+properties/0/replication_mode = 1
 properties/1/path = NodePath("Sprite2D:flip_h")
 properties/1/spawn = true
-properties/1/sync = true
+properties/1/replication_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8rkr1"]
 animation = &"Attack_1"
@@ -610,12 +610,10 @@ states/Start/position = Vector2(94, 176)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_bqjit"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_ginhq"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_daml0"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_qeowp"), "Jump", "Fall_start", SubResource("AnimationNodeStateMachineTransition_q8hrg"), "Fall_start", "Fall_end", SubResource("AnimationNodeStateMachineTransition_5ufo7"), "Fall_end", "Idle", SubResource("AnimationNodeStateMachineTransition_p2aqo"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_n353o"), "Attack_1", "Attack_2", SubResource("AnimationNodeStateMachineTransition_cf5pb"), "Attack_2", "Attack_3", SubResource("AnimationNodeStateMachineTransition_cgk84"), "Attack_3", "Idle", SubResource("AnimationNodeStateMachineTransition_hub50"), "Run", "Attack_1", SubResource("AnimationNodeStateMachineTransition_jp7qd"), "Idle", "Attack_1", SubResource("AnimationNodeStateMachineTransition_0lnd1"), "Attack_1", "Idle", SubResource("AnimationNodeStateMachineTransition_c25cs"), "Attack_2", "Idle", SubResource("AnimationNodeStateMachineTransition_g80wt"), "Idle", "Hurt", SubResource("AnimationNodeStateMachineTransition_x2t58"), "Hurt", "Idle", SubResource("AnimationNodeStateMachineTransition_r66ul"), "Hurt", "Dead", SubResource("AnimationNodeStateMachineTransition_mdvj4"), "Idle", "Dead", SubResource("AnimationNodeStateMachineTransition_6akl4")]
 graph_offset = Vector2(-169.926, -52.2894)
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_1ty1k"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sist4"]
 size = Vector2(35.5832, 14.6526)
 
-[node name="Player Character" type="CharacterBody2D"]
+[node name="Player Character" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_ct0e8")
 
@@ -642,11 +640,12 @@ position_smoothing_enabled = true
 replication_config = SubResource("SceneReplicationConfig_voqrl")
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_brr3u")
+}
 tree_root = SubResource("AnimationNodeStateMachine_vmskf")
-anim_player = NodePath("../AnimationPlayer")
 advance_expression_base_node = NodePath("..")
-active = true
-parameters/playback = SubResource("AnimationNodeStateMachinePlayback_1ty1k")
+anim_player = NodePath("../AnimationPlayer")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
